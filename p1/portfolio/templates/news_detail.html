@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ news.title }}</h1>
+    <img src="{{ news.image.url }}" alt="article-img" width="100%" height="auto">
+    <p>{{ news.content }}</p>
+    <p>Дата публикации: {{ news.created_at|date:"M d, Y" }}</p>
+  </div>
+{% endblock %}
